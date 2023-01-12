@@ -1,0 +1,55 @@
+```{r library}
+library(tidyverse)
+```
+
+```{r visual}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) 
+```
+
+```{r facets}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)
+```
+
+# Exercise
+
+1) One column would be made for each unique variable
+
+2) The plots with no points relate to the fact that are no vehicles with those characteristics
+``` {r exer}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl)) +
+  facet_grid(drv ~ cyl)
+```
+
+3) The following code shows the relationship between HWY MPG, drive type, and cylinder count.
+``` {r what}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+```
+
+4) Faceting allows the viewer of the data to separate data points in their mind, so they can look at information individually. However, it is harder to compare data. 
+``` {r 4}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)
+```
+
+5) Nrow counts the number of rows you want, while Ncol does this for columns. Facet grind is set in these fields. 
+
+6) In facet grind the more unique variables should be put in the columns because it is more legible
