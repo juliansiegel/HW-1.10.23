@@ -106,4 +106,4 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 
 ```{r 6.6}
 ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
-  geom_point(mapping = aes(color = drv, ))
+  geom_point(mapping = aes(fill = drv, size = 2, stroke = 2 ), shape = 21, color = "white")
