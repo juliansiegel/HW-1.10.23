@@ -83,10 +83,12 @@ I wish I was able to have the homeworld names written in a more clear way so tha
 
 ```{r}
 #| label: cat-cat
+ggplot(starwars, aes(x = height, y = species, color = sex)) +
+  geom_point()
 
 ```
 
-Interpretation goes here...
+I wanted to analyze the height variations between species. I decided to add sex as well, because I was interested in what that breakdown was in the data as well. 
 
 8.  Pick two numerical variables and two categorical variables and make a visualization that incorporates all of them and provide an interpretation with your answer.
 
@@ -94,7 +96,8 @@ Interpretation goes here...
 
 ```{r}
 #| label: multi
-ggplot(starwars, aes(x = hair_color, y = eye_color ))
+ggplot(starwars, aes(x = hair_color, y = eye_color, color = birth_year, size = mass )) +
+  geom_point()
 ```
 
-Interpretation goes here...
+I wasn't really sure what data to use on this one. I do find it cool that birth year was made into a color slider. 
