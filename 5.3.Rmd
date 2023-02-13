@@ -20,8 +20,9 @@ arrange(flights, desc(distance/(air_time)))
 ```
 4)
 ```{r 4}
-select(flights, flight, everything())
-arrange(flights, desc(distance))
-arrange(flights, distance)
+flightnumber <- select(flights, flight, everything())
+ arrange(flightnumber, desc(distance))
+ arrange(flightnumber, distance)
 ```
-The farthest flight was flight #
+The farthest flight was Hawaiian Air Flight #51 from JFK to Honolulu. The shortest flight was ExpressJet Flight #2224 from Newark to Philadelphia.
+
