@@ -1,0 +1,27 @@
+## 5.3 Exercises
+#### By Julian Siegel
+
+```{r libraries}
+library(nycflights13)
+library(tidyverse)
+```
+
+1) 
+```{r 1}
+arrange(flights, desc(is.na(arr_time)), arr_time)
+```
+2)
+```{r 2}
+arrange(flights, desc(dep_delay))
+```
+3) 
+```{r 3}
+arrange(flights, desc(distance/(air_time)))
+```
+4)
+```{r 4}
+select(flights, flight, everything())
+arrange(flights, desc(distance))
+arrange(flights, distance)
+```
+The farthest flight was flight #
