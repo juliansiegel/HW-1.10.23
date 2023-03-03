@@ -1,0 +1,14 @@
+---
+title: "French Election Data"
+author: "Julian Siegel"
+date: "2023-02-27"
+output: html_document
+---
+```{r tidy}
+library(tidyverse)
+```
+
+```{r read}
+read.csv("FrenchElection.csv",header=T)
+```
+
